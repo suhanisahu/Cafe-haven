@@ -1,0 +1,756 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #222222;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 60px;
+  background: #f5eee7;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero-subtitle,
+.section-label {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  color: #8b4513;
+}
+
+.hero h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.hero-description {
+  max-width: 580px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555555;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 14px 28px;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.primary-btn {
+  background: #8b4513;
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #6f350e;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1px solid #333333;
+  color: #333333;
+}
+
+/* =========================
+   ABOUT CAFE
+========================= */
+
+.about-cafe {
+  max-width: 850px;
+  margin: auto;
+  padding: 100px 30px;
+  text-align: center;
+}
+
+.about-cafe h2,
+.experiences h2,
+.booking-cta h2 {
+  font-size: 42px;
+  margin-bottom: 25px;
+}
+
+.about-cafe > p:last-child {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #666666;
+}
+
+/* =========================
+   EXPERIENCES
+========================= */
+
+.experiences {
+  padding: 100px 60px;
+  background: #fafafa;
+  text-align: center;
+}
+
+.experience-grid {
+  max-width: 1100px;
+  margin: 50px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.experience-card {
+  padding: 40px 30px;
+  background: white;
+  border: 1px solid #eeeeee;
+}
+
+.experience-icon {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.experience-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.experience-card p {
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* =========================
+   BOOKING CTA
+========================= */
+
+.booking-cta {
+  padding: 100px 30px;
+  text-align: center;
+  background: #f5eee7;
+}
+
+.booking-cta p:not(.section-label) {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  color: #666666;
+  line-height: 1.7;
+}
+
+.booking-cta .primary-btn {
+  margin-top: 10px;
+}
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 18px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    min-height: 75vh;
+    padding: 60px 25px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+  }
+
+  .about-cafe {
+    padding: 70px 25px;
+  }
+
+  .about-cafe h2,
+  .experiences h2,
+  .booking-cta h2 {
+    font-size: 32px;
+  }
+
+  .experiences {
+    padding: 70px 25px;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+    margin-top: 35px;
+  }
+
+  .booking-cta {
+    padding: 70px 25px;
+  }
+}
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 60px;
+  position: relative;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  color: white;
+}
+
+.hero-subtitle {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.hero-description {
+  max-width: 580px;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: #8b4513;
+  color: white;
+  border: none;
+}
+
+.primary-btn:hover {
+  background: #6f350e;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.secondary-btn:hover {
+  background: white;
+  color: black;
+}
+.experience-card {
+  background: white;
+  border: 1px solid #eeeeee;
+  overflow: hidden;
+}
+
+.experience-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.experience-card-content {
+  padding: 30px;
+}
+
+.experience-card-content h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.experience-card-content p {
+  color: #666666;
+  line-height: 1.6;
+}
+/* =========================
+   EXPERIENCES SECTION
+========================= */
+
+.experiences {
+  padding: 100px 60px;
+  background: #fafafa;
+  text-align: center;
+}
+
+.section-label {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #8b4513;
+  margin-bottom: 15px;
+}
+
+.experiences h2 {
+  font-size: 42px;
+  margin-bottom: 50px;
+}
+
+.experience-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.experience-card {
+  background: white;
+  border: 1px solid #eeeeee;
+  overflow: hidden;
+  text-align: left;
+}
+
+.experience-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.experience-card-content {
+  padding: 30px;
+}
+
+.experience-card-content h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.experience-card-content p {
+  color: #666666;
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .experiences {
+    padding: 70px 25px;
+  }
+
+  .experiences h2 {
+    font-size: 32px;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-card img {
+    height: 220px;
+  }
+}@media (max-width: 768px) {
+  .experiences {
+    padding: 70px 25px;
+  }
+
+  .experiences h2 {
+    font-size: 32px;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-card img {
+    height: 220px;
+  }
+}@media (max-width: 768px) {
+  .experiences {
+    padding: 70px 25px;
+  }
+
+  .experiences h2 {
+    font-size: 32px;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-card img {
+    height: 220px;
+  }
+}
+/* =========================
+   OUR STORY SECTION
+========================= */
+
+.about-cafe {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 100px 30px;
+  text-align: center;
+}
+
+.about-cafe h2 {
+  font-size: 42px;
+  margin-bottom: 25px;
+}
+
+.about-cafe > p:last-child {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #666666;
+}
+
+@media (max-width: 768px) {
+  .about-cafe {
+    padding: 70px 25px;
+  }
+
+  .about-cafe h2 {
+    font-size: 32px;
+  }
+}
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+  position: relative;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  display: inline-block;
+  font-size: 15px;
+  color: #333333;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1001;
+}
+
+.nav-links a:hover {
+  color: #8b4513;
+}
+/* =========================
+   BOOKING PAGE
+========================= */
+
+.booking-page {
+  min-height: 100vh;
+  background: #faf7f3;
+}
+
+.booking-header {
+  padding: 80px 30px 50px;
+  text-align: center;
+}
+
+.booking-header h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.booking-header p:not(.section-label) {
+  color: #666666;
+  font-size: 17px;
+}
+
+.booking-form-section {
+  padding: 20px 30px 100px;
+}
+
+.booking-form {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 45px;
+  background: white;
+  border: 1px solid #eeeeee;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #dddddd;
+  font-size: 15px;
+  outline: none;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #8b4513;
+}
+
+.booking-form .primary-btn {
+  grid-column: 1 / -1;
+  border: none;
+  padding: 15px 25px;
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .booking-header {
+    padding: 60px 25px 35px;
+  }
+
+  .booking-header h1 {
+    font-size: 36px;
+  }
+
+  .booking-form-section {
+    padding: 20px 20px 70px;
+  }
+
+  .booking-form {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+  }
+
+  .booking-form .primary-btn {
+    grid-column: auto;
+  }
+}
+.menu-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.menu-card {
+  background: white;
+  border: 1px solid #eeeeee;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* My Bookings Page */
+.my-bookings-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.my-booking-card {
+  background: #fffaf4;
+  border: 1px solid #eadbca;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(76, 48, 29, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.my-booking-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(76, 48, 29, 0.14);
+}
+
+.my-booking-card h2 {
+  color: #5b3424;
+  font-size: 1.4rem;
+  margin: 0 0 18px;
+}
+
+.my-booking-card p {
+  color: #625247;
+  line-height: 1.7;
+  margin: 8px 0;
+  overflow-wrap: anywhere;
+}
+
+.my-booking-card p strong {
+  color: #3f2a20;
+}
+
+.my-booking-card button {
+  margin: 12px 8px 0 0;
+  cursor: pointer;
+}
+
+.my-booking-card button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.my-booking-card .booking-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #eadbca;
+}
+
+.my-booking-card .booking-form h3 {
+  color: #5b3424;
+  margin: 0 0 8px;
+}
+
+.my-booking-card .booking-form label {
+  color: #493529;
+  font-weight: 600;
+}
+
+.my-booking-card .booking-form input,
+.my-booking-card .booking-form select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #d9c5b2;
+  border-radius: 8px;
+  background: #ffffff;
+  font: inherit;
+}
+
+.my-booking-card .booking-form input:focus,
+.my-booking-card .booking-form select:focus {
+  outline: 2px solid #a96b43;
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  .my-bookings-list {
+    grid-template-columns: 1fr;
+  }
+
+  .my-booking-card {
+    padding: 18px;
+  }
+
+  .my-booking-card button {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.booking-status {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status-pending {
+  background: #fff0c2;
+  color: #805800;
+}
+
+.status-confirmed {
+  background: #d9f5df;
+  color: #176b32;
+}
+
+.status-cancelled {
+  background: #ffe0e0;
+  color: #a32121;
+}
