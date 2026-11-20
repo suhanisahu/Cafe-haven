@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 
-const API_URL = "http://localhost:8000/api";
+const API_URL = "https://cafe-haven.onrender.com/api";
 
 function getCookie(name) {
   const cookies = document.cookie.split(";");

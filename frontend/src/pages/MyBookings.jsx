@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-const API_URL = "http://localhost:8000/api/bookings/";
-const CSRF_URL = "http://localhost:8000/api/accounts/csrf/";
+const API_URL = "https://cafe-haven.onrender.com/api/bookings/";
+const CSRF_URL = "https://cafe-haven.onrender.com/api/accounts/csrf/";
 
 const emptyForm = {
   full_name: "",

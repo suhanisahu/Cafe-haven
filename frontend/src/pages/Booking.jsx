@@ -19,7 +19,7 @@ import candleDinner from "../assets/images/candle-dinner.png";
 import familyDinner from "../assets/images/family-dinner.png";
 import privateTheatre from "../assets/images/private-theatre.png";
 
-const API_URL = "http://localhost:8000/api";
+const API_URL = "https://cafe-haven.onrender.com/api";
 
 const EXPERIENCE_PRICES = {
   regular: 0,

@@ -3,7 +3,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Menu, X, Coffee, ArrowUpRight } from "lucide-react";
 
-const API_URL = "http://localhost:8000/api";
+const API_URL = "https://cafe-haven.onrender.com/api";
 
 function Navbar() {
   const [user, setUser] = useState(null);

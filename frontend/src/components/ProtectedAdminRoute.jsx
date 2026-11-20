@@ -8,7 +8,7 @@ function ProtectedAdminRoute({ children }) {
     const checkAdmin = async () => {
       try {
         const response = await fetch(
-          "http://localhost:8000/api/accounts/me/",
+         "https://cafe-haven.onrender.com/api/accounts/me/",
           { credentials: "include" }
         );
 

@@ -16,8 +16,8 @@ import {
   CartesianGrid,
 } from "recharts";
 
-const API_URL = "http://localhost:8000/api/bookings/";
-const ACCOUNT_API = "http://localhost:8000/api/accounts/";
+const API_URL = "https://cafe-haven.onrender.com/api/bookings/";
+const ACCOUNT_API = "https://cafe-haven.onrender.com/api/accounts/";
 
 function AdminDashboard() {
   const [stats, setStats] = useState({

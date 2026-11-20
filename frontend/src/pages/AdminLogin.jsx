@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const API_URL = "http://localhost:8000/api/accounts/";
+const API_URL = "https://cafe-haven.onrender.com/api/accounts/";
 
 function AdminLogin() {
   const navigate = useNavigate();
